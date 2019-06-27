@@ -30,7 +30,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public void showMessage(String message) {
-        CoordinatorLayout container = (CoordinatorLayout) findViewById(
+        CoordinatorLayout container = findViewById(
                 R.id.coordinatorLayout);
         this.showMessageSnack(container, message, R.color.colorPrimaryDark);
     }
@@ -42,7 +42,7 @@ public class BaseActivity extends AppCompatActivity {
             snackbar.setActionTextColor(Color.WHITE);
             View sbView = snackbar.getView();
             sbView.setBackgroundColor(ContextCompat.getColor(this, colorResource));
-            TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+            TextView textView =  sbView.findViewById(android.support.design.R.id.snackbar_text);
             textView.setTextColor(Color.WHITE);
             snackbar.show();
         } else {

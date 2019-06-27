@@ -1,5 +1,6 @@
 package com.unmsm.inteligenciaartificial.presentation.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 import com.unmsm.inteligenciaartificial.R;
 import com.unmsm.inteligenciaartificial.core.BaseFragment;
 import com.unmsm.inteligenciaartificial.presentation.contract.ContractCore;
+
+import static android.support.v4.util.Preconditions.checkNotNull;
 
 
 /**
@@ -80,6 +83,7 @@ public class FragmentCore extends BaseFragment implements ContractCore.View {
         return true;
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public void setPresenter(ContractCore.Presenter presenter) {
         mPresenter = checkNotNull(presenter);
